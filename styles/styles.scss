@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+@import "photoswipe/main";
+
+$color-white: #fff;
+$color-green: #aee5d8;
+$color-blue: #81b0ca;
+$color-text: #4a4a4a;
+$color-light-blue: #e6f3fa;
+$color-very-light-blue: #f1faff;
+
+body {
+  background: $color-white;
+  margin: 0;
+  overflow: hidden;
+  background-color: silver;
+  background-image: radial-gradient(
+      circle at 100% 150%,
+      $color-light-blue 24%,
+      white 25%,
+      white 28%,
+      $color-light-blue 29%,
+      $color-light-blue 36%,
+      white 36%,
+      white 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 150%,
+      $color-light-blue 24%,
+      white 25%,
+      white 28%,
+      $color-light-blue 29%,
+      $color-light-blue 36%,
+      white 36%,
+      white 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      white 10%,
+      $color-light-blue 11%,
+      $color-light-blue 23%,
+      white 24%,
+      white 30%,
+      $color-light-blue 31%,
+      $color-light-blue 43%,
+      white 44%,
+      white 50%,
+      $color-light-blue 51%,
+      $color-light-blue 63%,
+      white 64%,
+      white 71%,
+      transparent 71%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      white 5%,
+      $color-light-blue 6%,
+      $color-light-blue 15%,
+      white 16%,
+      white 20%,
+      $color-light-blue 21%,
+      $color-light-blue 30%,
+      white 31%,
+      white 35%,
+      $color-light-blue 36%,
+      $color-light-blue 45%,
+      white 46%,
+      white 49%,
+      transparent 50%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 50%,
+      white 5%,
+      $color-light-blue 6%,
+      $color-light-blue 15%,
+      white 16%,
+      white 20%,
+      $color-light-blue 21%,
+      $color-light-blue 30%,
+      white 31%,
+      white 35%,
+      $color-light-blue 36%,
+      $color-light-blue 45%,
+      white 46%,
+      white 49%,
+      transparent 50%,
+      transparent
+    );
+  background-size: 100px 50px;
+}
+
+a {
+  color: $color-blue;
+  text-decoration: none;
+  transition: all 350ms;
+  &:hover {
+    color: $color-text;
+  }
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $color-text;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $color-text;
+  border-top: 1px #ccc solid;
+  padding: 50px 0 20px 0;
+  margin-top: 50px;
+  margin: 50px auto 0 auto;
+  max-width: 60ch;
+  display: block;
+}
+
+p {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.content {
+  box-sizing: border-box;
+  padding: 50px;
+  position: absolute;
+  top: 66px;
+  left: 35px;
+  bottom: 35px;
+  right: 35px;
+  overflow: auto;
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba($color-text, 0.3);
+  background-color: silver;
+  background-image: radial-gradient(
+      circle at 100% 150%,
+      $color-very-light-blue 24%,
+      white 25%,
+      white 28%,
+      $color-very-light-blue 29%,
+      $color-very-light-blue 36%,
+      white 36%,
+      white 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 150%,
+      $color-very-light-blue 24%,
+      white 25%,
+      white 28%,
+      $color-very-light-blue 29%,
+      $color-very-light-blue 36%,
+      white 36%,
+      white 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      white 10%,
+      $color-very-light-blue 11%,
+      $color-very-light-blue 23%,
+      white 24%,
+      white 30%,
+      $color-very-light-blue 31%,
+      $color-very-light-blue 43%,
+      white 44%,
+      white 50%,
+      $color-very-light-blue 51%,
+      $color-very-light-blue 63%,
+      white 64%,
+      white 71%,
+      transparent 71%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      white 5%,
+      $color-very-light-blue 6%,
+      $color-very-light-blue 15%,
+      white 16%,
+      white 20%,
+      $color-very-light-blue 21%,
+      $color-very-light-blue 30%,
+      white 31%,
+      white 35%,
+      $color-very-light-blue 36%,
+      $color-very-light-blue 45%,
+      white 46%,
+      white 49%,
+      transparent 50%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 50%,
+      white 5%,
+      $color-very-light-blue 6%,
+      $color-very-light-blue 15%,
+      white 16%,
+      white 20%,
+      $color-very-light-blue 21%,
+      $color-very-light-blue 30%,
+      white 31%,
+      white 35%,
+      $color-very-light-blue 36%,
+      $color-very-light-blue 45%,
+      white 46%,
+      white 49%,
+      transparent 50%,
+      transparent
+    );
+  background-size: 25px 12.5px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background: $color-light-blue;
+    border-radius: 0 5px 5px 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-blue;
+    border-radius: 0 5px 5px 0;
+  }
+
+  &.content--centered {
+    text-align: center;
+  }
+
+  &.content--hero {
+    box-sizing: border-box;
+    background-image: url("/static/gallery/home.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .content__container {
+    max-width: 650px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @media (max-width: 800px) {
+    top: 42px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 35px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  @media (max-width: 800px) {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .header__logo {
+    width: 50%;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    color: $color-blue;
+    @media (max-width: 800px) {
+      font-size: 28px;
+    }
+  }
+  .header__nav-toggle {
+    display: none;
+    width: 32px;
+    height: 42px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 350ms;
+
+    svg {
+      width: 32px;
+      height: 32px;
+      fill: $color-blue;
+    }
+    @media (max-width: 800px) {
+      display: flex;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  ul.header__nav {
+    list-style: none;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    li {
+      padding: 0;
+      margin: 0;
+
+      a {
+        text-decoration: none;
+        padding: 20px 15px;
+        box-sizing: border-box;
+        display: inline-block;
+        font-family: "PT Serif", serif;
+        font-size: 17px;
+        font-weight: bold;
+        color: $color-text;
+        border-bottom: 4px rgba($color-blue, 0) solid;
+        transition: all 350ms;
+        &:hover {
+          color: $color-blue;
+          border-bottom: 4px $color-blue solid;
+        }
+
+        @media (max-width: 960px) {
+          padding: 21px 10px;
+          font-size: 15px;
+        }
+      }
+    }
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+}
+
+iframe {
+  width: 100%;
+  max-width: 450px;
+  height: 250px;
+  outline: none;
+  border: 0;
+  filter: grayscale(100%);
+  transition: all 350ms;
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+img.about {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.pswp-gallery {
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+}
+
+.section__gallery {
+  p {
+    text-align: center;
+  }
+}
+
+.mobile-nav {
+  top: 42px;
+  left: 20px;
+  right: 20px;
+  width: calc(100% - 40px);
+  bottom: 20px;
+  z-index: 999;
+  position: fixed;
+  display: none;
+  background: #fff;
+  &.mobile-nav--opened {
+    @media (max-width: 800px) {
+      display: flex !important;
+      ul {
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        li {
+          padding: 0;
+          margin: 0;
+
+          a {
+            text-decoration: none;
+            padding: 20px 15px;
+            box-sizing: border-box;
+            display: inline-block;
+            font-family: "PT Serif", serif;
+            font-size: 17px;
+            font-weight: bold;
+            color: $color-text;
+            border-bottom: 4px rgba($color-blue, 0) solid;
+            transition: all 350ms;
+            &:hover {
+              color: $color-blue;
+              border-bottom: 4px $color-blue solid;
+            }
+          }
+        }
+      }
+    }
+  }
+}
