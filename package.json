@@ -19,7 +19,10 @@
   },
   "homepage": "https://github.com/DecentDescent/dobre-bydlo.eu#readme",
   "dependencies": {
+    "@sanity/block-content-to-react": "^2.0.6",
+    "@sanity/client": "^0.140.7",
     "@zeit/next-sass": "^1.0.1",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^7.0.2",
     "next-compose-plugins": "^2.1.1",
     "node-sass": "^4.9.4",

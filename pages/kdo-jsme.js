@@ -2,10 +2,18 @@ import "../styles/styles.scss";
 import Head from "../components/Head";
 import Content from "../components/Content";
 import Header from "../components/Header";
+const sanityClient = require("@sanity/client");
+import BlockContent from "@sanity/block-content-to-react";
+
+const client = sanityClient({
+  projectId: "6rx0nq6y",
+  dataset: "dobrebydloeudata"
+});
 
 export default class KdoJsme extends React.Component {
   state = {
-    navOpened: false
+    navOpened: false,
+    loading: true
   };
 
   navToggle = () => {
@@ -19,6 +27,29 @@ export default class KdoJsme extends React.Component {
       navOpened: false
     });
   };
+
+  componentDidMount() {
+    client
+      .fetch(
+        `
+        * | [ _type == "page" && slug.current == "kdo-jsme"]| {
+          _id,
+          title,
+          content,
+        }`
+      )
+      .then(res => {
+        this.setState({
+          loading: false,
+          pageTitle: res[0].title,
+          pageContent: res[0].content
+        });
+        yar;
+      })
+      .catch(err => {
+        console.error("Oh no, error occured: ", err);
+      });
+  }
 
   render() {
     return (
@@ -35,39 +66,9 @@ export default class KdoJsme extends React.Component {
           navHandler={this.navHandler}
         >
           <div className="content__container">
-            <h1>Kdo jsme</h1>
+            <h1>{this.state.pageTitle}</h1>
             <img src="static/gallery/home.jpg" className="about" />
-            <p>
-              Jsme Dobré bydlo.
-              <br />
-              Jsme ateliér.
-              <br />
-              Jsme obchod.
-              <br />
-              Jsme dvě 40+.
-            </p>
-            <p>
-              Máme rády ruční práce, šití, tvořiost, látky. Daly jsme se
-              dohromady, abychom dávaly látkám hloubku, tvar a harmonii.
-            </p>
-            <p>
-              Kombinujeme ruční práci a precizní šití. Ke každé zakázce
-              přistupujeme tak, jako bychom jí dělaly samy pro sebe.
-            </p>
-            <p>
-              Od roku 1999 budujeme Dobré bydlo coby zakázkový ateliér otevřený
-              pro tvůrčí inspiraci.
-            </p>
-            <p>
-              Ve spolupráci s architekty vytváříme celé interiéry, ale umíme i
-              doplňky pro útulný domov.
-            </p>
-            <p>
-              <strong>Zkrátka a jednoduše</strong>
-              <br />
-              <strong>Navrhneme - Zaměříme - Ušijeme - Pověsíme</strong>
-            </p>
-            <p>Okna oblékáme, stoly prostíráme.</p>
+            <BlockContent blocks={this.state.pageContent} />
           </div>
         </Content>
       </div>
