@@ -2,178 +2,33 @@ import "../styles/styles.scss";
 import Head from "../components/Head";
 import Content from "../components/Content";
 import Header from "../components/Header";
-import { PhotoSwipeGallery } from "react-photoswipe-component";
 const sanityClient = require("@sanity/client");
 import BlockContent from "@sanity/block-content-to-react";
+import imageUrlBuilder from "@sanity/image-url";
+import { PhotoSwipe, PhotoSwipeGallery } from "react-photoswipe";
 
 const client = sanityClient({
   projectId: "6rx0nq6y",
   dataset: "dobrebydloeudata"
 });
 
+const builder = imageUrlBuilder(client);
+
+let tempArray = [];
+let tempTitles = [];
+let tempDescriptions = [];
+let tempContents = [];
+let tempGallery = {};
+let tempImg = [];
+let tempURL;
+
 export default class MameNasito extends React.Component {
   state = {
     navOpened: false,
-    loading: true,
-    pageTitle: "Máme našito",
-    pageDescription: "Načítání...",
-    images: [
-      {
-        src: "static/gallery/mame-nasito/1.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/2.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/3.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/4.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/5.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/6.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/7.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/8.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/9.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/10.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/11.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/12.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/13.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/14.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/15.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/16.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/17.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/18.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/19.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/20.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/21.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/22.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/23.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/24.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/25.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/26.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/27.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/28.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/29.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/30.jpg",
-        w: 1200,
-        h: 800
-      },
-      {
-        src: "static/gallery/mame-nasito/31.jpg",
-        w: 1200,
-        h: 800
-      }
-    ]
+    dataTitles: [],
+    dataDescriptions: [],
+    dataGallery: [],
+    galleryOpened: false
   };
 
   navToggle = () => {
@@ -187,11 +42,89 @@ export default class MameNasito extends React.Component {
       navOpened: false
     });
   };
+
+  openPhotoSwipe = e => {
+    e.preventDefault();
+    this.setState({
+      isOpen: true,
+      options: {
+        closeOnScroll: false
+      }
+    });
+  };
+
+  handleClose = () => {
+    this.setState({
+      isOpen: false
+    });
+  };
+
+  getThumbnailContent = item => {
+    return <img src={item.thumbnail} with={120} height={90} />;
+  };
+
+  generateGalleries() {
+    Object.keys(tempContents).map(j =>
+      Object.keys(tempContents[j]).map(
+        k => (
+          (tempURL = builder.image(tempContents[j][k]).url()),
+          (tempGallery[j] = [
+            ...(tempGallery[j] || []),
+            {
+              src: tempURL,
+              thumbnail: tempURL + "?w=500",
+              title: "Photo",
+              w: tempURL
+                .split("-")[1]
+                .split(".")[0]
+                .split("x")[0],
+              h: tempURL
+                .split("-")[1]
+                .split(".")[0]
+                .split("x")[1]
+            }
+          ])
+        )
+      )
+    );
+    this.setState({
+      dataTitles: tempTitles,
+      dataDescriptions: tempDescriptions,
+      dataGallery: tempGallery
+    }),
+      this.renderGalleries();
+  }
+
+  getThumbnailContent = item => {
+    return <img src={item.thumbnail} with={120} height={90} />;
+  };
+
+  renderGalleries = () => {
+    console.log("Before loop");
+    for (let a = 0; a <= this.state.dataTitles.length; a++) {
+      console.log(a);
+      return (
+        <div>
+          <div className="content__container">
+            <h1>{this.state.dataTitles[a]}</h1>
+            <p>{this.state.dataDescriptions[a]}</p>
+          </div>
+          <div className="section__gallery">
+            <PhotoSwipeGallery
+              items={this.state.dataGallery[a]}
+              thumbnailContent={this.getThumbnailContent}
+            />
+          </div>
+        </div>
+      );
+    }
+  };
+
   componentWillMount() {
     client
       .fetch(
         `
-      * | [ _type == "galerie" && slug.current == "mame-nasito"]| {
+      * | [ _type == "galerie"]| {
         _id,
         title,
         description,
@@ -199,11 +132,16 @@ export default class MameNasito extends React.Component {
       }`
       )
       .then(res => {
-        this.setState({
-          loading: false,
-          pageTitle: res[0].title,
-          pageDescription: res[0].description
-        });
+        Object.keys(res).map(
+          i => (
+            tempTitles.push(res[i].title),
+            tempDescriptions.push(res[i].description),
+            tempContents.push(res[i].content),
+            i >= res.length - 1
+              ? this.generateGalleries()
+              : console.log("Načítám")
+          )
+        );
       })
       .catch(err => {
         console.error("Oh no, error occured: ", err);
@@ -220,17 +158,11 @@ export default class MameNasito extends React.Component {
           navToggle={this.navToggle}
         />
         <Content navOpened={this.state.navOpened} navHandler={this.navHandler}>
-          <div
-            className="content__container"
-            navOpened={this.state.navOpened}
-            navHandler={this.navHandler}
-          >
-            <h1>{this.state.pageTitle}</h1>
-            <p>{this.state.pageDescription}</p>
-          </div>
-          <div className="section__gallery">
-            <PhotoSwipeGallery items={this.state.images} />
-          </div>
+          {this.state.dataGallery[0] ? (
+            this.renderGalleries()
+          ) : (
+            <p className="loading">Načítání...</p>
+          )}
         </Content>
       </div>
     );

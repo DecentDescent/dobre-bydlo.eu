@@ -1,8 +1,8 @@
-import icon from "react-icons/lib/md/store";
+import icon from "react-icons/lib/md/photo";
 
 export default {
-  name: "galerie",
-  title: "Galerie",
+  name: "realizace",
+  title: "Realizace",
   type: "document",
   icon,
   fields: [

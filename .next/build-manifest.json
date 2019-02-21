@@ -1,6 +1,6 @@
 {
   "devFiles": [
-    "static/development/dll/dll_b0c3ebe5fbad0aa8729d.js"
+    "static/development/dll/dll_fafb450fa63acba57153.js"
   ],
   "pages": {
     "/_app": [
@@ -11,13 +11,13 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/realizace": [
+    "/mame-nasito": [
       "static/runtime/webpack.js",
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
       "static/runtime/main.js"
     ],
-    "/mame-nasito": [
+    "/realizace": [
       "static/runtime/webpack.js",
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",

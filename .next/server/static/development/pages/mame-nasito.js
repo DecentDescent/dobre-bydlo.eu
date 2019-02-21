@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -426,7 +426,7 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        class: "header__logo",
+        className: "header__logo",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 5
@@ -462,7 +462,7 @@ function (_React$Component) {
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        class: "header__nav",
+        className: "header__nav",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 17
@@ -552,14 +552,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Head */ "./components/Head.js");
 /* harmony import */ var _components_Content__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Content */ "./components/Content.js");
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
-/* harmony import */ var react_photoswipe_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-photoswipe-component */ "react-photoswipe-component");
-/* harmony import */ var react_photoswipe_component__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_photoswipe_component__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _sanity_block_content_to_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @sanity/block-content-to-react */ "@sanity/block-content-to-react");
-/* harmony import */ var _sanity_block_content_to_react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_sanity_block_content_to_react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _sanity_block_content_to_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @sanity/block-content-to-react */ "@sanity/block-content-to-react");
+/* harmony import */ var _sanity_block_content_to_react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_sanity_block_content_to_react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _sanity_image_url__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @sanity/image-url */ "@sanity/image-url");
+/* harmony import */ var _sanity_image_url__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_sanity_image_url__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_photoswipe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-photoswipe */ "react-photoswipe");
+/* harmony import */ var react_photoswipe__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_photoswipe__WEBPACK_IMPORTED_MODULE_7__);
 var _jsxFileName = "/Users/decent_descent/Desktop/dobre-bydlo.eu/pages/mame-nasito.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -584,14 +594,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
 var sanityClient = __webpack_require__(/*! @sanity/client */ "@sanity/client");
+
+
 
 
 var client = sanityClient({
   projectId: "6rx0nq6y",
   dataset: "dobrebydloeudata"
 });
+var builder = _sanity_image_url__WEBPACK_IMPORTED_MODULE_6___default()(client);
+var tempArray = [];
+var tempTitles = [];
+var tempDescriptions = [];
+var tempContents = [];
+var tempGallery = {};
+var tempImg = [];
+var tempURL;
 
 var MameNasito =
 /*#__PURE__*/
@@ -613,134 +632,10 @@ function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
       navOpened: false,
-      loading: true,
-      pageTitle: "Máme našito",
-      pageDescription: "Načítání...",
-      images: [{
-        src: "static/gallery/mame-nasito/1.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/2.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/3.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/4.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/5.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/6.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/7.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/8.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/9.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/10.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/11.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/12.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/13.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/14.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/15.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/16.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/17.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/18.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/19.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/20.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/21.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/22.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/23.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/24.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/25.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/26.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/27.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/28.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/29.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/30.jpg",
-        w: 1200,
-        h: 800
-      }, {
-        src: "static/gallery/mame-nasito/31.jpg",
-        w: 1200,
-        h: 800
-      }]
+      dataTitles: [],
+      dataDescriptions: [],
+      dataGallery: [],
+      galleryOpened: false
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "navToggle", function () {
@@ -755,19 +650,129 @@ function (_React$Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "openPhotoSwipe", function (e) {
+      e.preventDefault();
+
+      _this.setState({
+        isOpen: true,
+        options: {
+          closeOnScroll: false
+        }
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleClose", function () {
+      _this.setState({
+        isOpen: false
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "getThumbnailContent", function (item) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: item.thumbnail,
+        with: 120,
+        height: 90,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "getThumbnailContent", function (item) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: item.thumbnail,
+        with: 120,
+        height: 90,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99
+        },
+        __self: this
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "renderGalleries", function () {
+      console.log("Before loop");
+
+      for (var a = 0; a <= _this.state.dataTitles.length; a++) {
+        console.log(a);
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 107
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "content__container",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 108
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 109
+          },
+          __self: this
+        }, _this.state.dataTitles[a]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 110
+          },
+          __self: this
+        }, _this.state.dataDescriptions[a])), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "section__gallery",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 112
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_photoswipe__WEBPACK_IMPORTED_MODULE_7__["PhotoSwipeGallery"], {
+          items: _this.state.dataGallery[a],
+          thumbnailContent: _this.getThumbnailContent,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 113
+          },
+          __self: this
+        })));
+      }
+    });
+
     return _this;
   }
 
   _createClass(MameNasito, [{
+    key: "generateGalleries",
+    value: function generateGalleries() {
+      Object.keys(tempContents).map(function (j) {
+        return Object.keys(tempContents[j]).map(function (k) {
+          return tempURL = builder.image(tempContents[j][k]).url(), tempGallery[j] = _toConsumableArray(tempGallery[j] || []).concat([{
+            src: tempURL,
+            thumbnail: tempURL + "?w=500",
+            title: "Photo",
+            w: tempURL.split("-")[1].split(".")[0].split("x")[0],
+            h: tempURL.split("-")[1].split(".")[0].split("x")[1]
+          }]);
+        });
+      });
+      this.setState({
+        dataTitles: tempTitles,
+        dataDescriptions: tempDescriptions,
+        dataGallery: tempGallery
+      }), this.renderGalleries();
+    }
+  }, {
     key: "componentWillMount",
     value: function componentWillMount() {
       var _this2 = this;
 
-      client.fetch("\n      * | [ _type == \"galerie\" && slug.current == \"mame-nasito\"]| {\n        _id,\n        title,\n        description,\n        content,\n      }").then(function (res) {
-        _this2.setState({
-          loading: false,
-          pageTitle: res[0].title,
-          pageDescription: res[0].description
+      client.fetch("\n      * | [ _type == \"galerie\"]| {\n        _id,\n        title,\n        description,\n        content,\n      }").then(function (res) {
+        Object.keys(res).map(function (i) {
+          return tempTitles.push(res[i].title), tempDescriptions.push(res[i].description), tempContents.push(res[i].content), i >= res.length - 1 ? _this2.generateGalleries() : console.log("Načítám");
         });
       }).catch(function (err) {
         console.error("Oh no, error occured: ", err);
@@ -779,13 +784,13 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 215
+          lineNumber: 153
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Head__WEBPACK_IMPORTED_MODULE_2__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 216
+          lineNumber: 154
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -794,7 +799,7 @@ function (_React$Component) {
         navToggle: this.navToggle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 217
+          lineNumber: 155
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Content__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -802,45 +807,17 @@ function (_React$Component) {
         navHandler: this.navHandler,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 222
+          lineNumber: 160
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "content__container",
-        navOpened: this.state.navOpened,
-        navHandler: this.navHandler,
+      }, this.state.dataGallery[0] ? this.renderGalleries() : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "loading",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 223
+          lineNumber: 164
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 228
-        },
-        __self: this
-      }, this.state.pageTitle), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 229
-        },
-        __self: this
-      }, this.state.pageDescription)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "section__gallery",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 231
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_photoswipe_component__WEBPACK_IMPORTED_MODULE_5__["PhotoSwipeGallery"], {
-        items: this.state.images,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 232
-        },
-        __self: this
-      }))));
+      }, "Na\u010D\xEDt\xE1n\xED...")));
     }
   }]);
 
@@ -862,7 +839,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!************************************!*\
   !*** multi ./pages/mame-nasito.js ***!
   \************************************/
@@ -896,6 +873,17 @@ module.exports = require("@sanity/client");
 
 /***/ }),
 
+/***/ "@sanity/image-url":
+/*!************************************!*\
+  !*** external "@sanity/image-url" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@sanity/image-url");
+
+/***/ }),
+
 /***/ "next/head":
 /*!****************************!*\
   !*** external "next/head" ***!
@@ -918,14 +906,14 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ "react-photoswipe-component":
-/*!*********************************************!*\
-  !*** external "react-photoswipe-component" ***!
-  \*********************************************/
+/***/ "react-photoswipe":
+/*!***********************************!*\
+  !*** external "react-photoswipe" ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("react-photoswipe-component");
+module.exports = require("react-photoswipe");
 
 /***/ })
 

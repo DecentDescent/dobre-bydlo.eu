@@ -13,7 +13,8 @@ const client = sanityClient({
 export default class Kontakt extends React.Component {
   state = {
     navOpened: false,
-    loading: true
+    loading: true,
+    pageContent: []
   };
 
   navToggle = () => {
@@ -44,7 +45,6 @@ export default class Kontakt extends React.Component {
           pageTitle: res[0].title,
           pageContent: res[0].content
         });
-        yar;
       })
       .catch(err => {
         console.error("Oh no, error occured: ", err);

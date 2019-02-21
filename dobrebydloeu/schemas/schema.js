@@ -3,8 +3,9 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import blockContent from "./blockContent";
 import page from "./page";
 import galerie from "./galerie";
+import realizace from "./realizace";
 
 export default createSchema({
   name: "default",
-  types: schemaTypes.concat([blockContent, page, galerie])
+  types: schemaTypes.concat([blockContent, page, galerie, realizace])
 });

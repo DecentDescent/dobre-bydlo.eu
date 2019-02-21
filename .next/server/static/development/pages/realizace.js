@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -426,7 +426,7 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        class: "header__logo",
+        className: "header__logo",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 5
@@ -462,7 +462,7 @@ function (_React$Component) {
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        class: "header__nav",
+        className: "header__nav",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 17
@@ -552,12 +552,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Head */ "./components/Head.js");
 /* harmony import */ var _components_Content__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Content */ "./components/Content.js");
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
-/* harmony import */ var react_photoswipe_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-photoswipe-component */ "react-photoswipe-component");
-/* harmony import */ var react_photoswipe_component__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_photoswipe_component__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _sanity_block_content_to_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @sanity/block-content-to-react */ "@sanity/block-content-to-react");
+/* harmony import */ var _sanity_block_content_to_react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_sanity_block_content_to_react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _sanity_image_url__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @sanity/image-url */ "@sanity/image-url");
+/* harmony import */ var _sanity_image_url__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_sanity_image_url__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_photoswipe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-photoswipe */ "react-photoswipe");
+/* harmony import */ var react_photoswipe__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_photoswipe__WEBPACK_IMPORTED_MODULE_7__);
 var _jsxFileName = "/Users/decent_descent/Desktop/dobre-bydlo.eu/pages/realizace.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -582,240 +594,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var PHOTO_ITEMS_1 = [{
-  src: "static/gallery/realizace/vinarstvi/1.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Vinařství"
-}, {
-  src: "static/gallery/realizace/vinarstvi/2.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Vinařství"
-}, {
-  src: "static/gallery/realizace/vinarstvi/3.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Vinařství"
-}, {
-  src: "static/gallery/realizace/vinarstvi/4.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Vinařství"
-}, {
-  src: "static/gallery/realizace/vinarstvi/5.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Vinařství"
-}, {
-  src: "static/gallery/realizace/vinarstvi/6.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Vinařství"
-}, {
-  src: "static/gallery/realizace/vinarstvi/7.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Vinařství"
-}, {
-  src: "static/gallery/realizace/vinarstvi/8.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Vinařství"
-}, {
-  src: "static/gallery/realizace/vinarstvi/9.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Vinařství"
-}, {
-  src: "static/gallery/realizace/vinarstvi/10.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Vinařství"
-}, {
-  src: "static/gallery/realizace/vinarstvi/11.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Vinařství"
-}, {
-  src: "static/gallery/realizace/vinarstvi/12.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Vinařství"
-}];
-var PHOTO_ITEMS_2 = [{
-  src: "static/gallery/realizace/pekarstvi/1.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Pekařství Kraupner"
-}, {
-  src: "static/gallery/realizace/pekarstvi/2.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Pekařství Kraupner"
-}, {
-  src: "static/gallery/realizace/pekarstvi/3.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Pekařství Kraupner"
-}, {
-  src: "static/gallery/realizace/pekarstvi/4.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Pekařství Kraupner"
-}, {
-  src: "static/gallery/realizace/pekarstvi/5.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Pekařství Kraupner"
-}, {
-  src: "static/gallery/realizace/pekarstvi/6.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Pekařství Kraupner"
-}, {
-  src: "static/gallery/realizace/pekarstvi/7.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Pekařství Kraupner"
-}];
-var PHOTO_ITEMS_3 = [{
-  src: "static/gallery/realizace/cukrarna/1.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Cukrárna a Kavárna Dortletka"
-}, {
-  src: "static/gallery/realizace/cukrarna/2.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Cukrárna a Kavárna Dortletka"
-}, {
-  src: "static/gallery/realizace/cukrarna/3.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Cukrárna a Kavárna Dortletka"
-}, {
-  src: "static/gallery/realizace/cukrarna/4.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Cukrárna a Kavárna Dortletka"
-}, {
-  src: "static/gallery/realizace/cukrarna/5.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Cukrárna a Kavárna Dortletka"
-}, {
-  src: "static/gallery/realizace/cukrarna/6.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Cukrárna a Kavárna Dortletka"
-}, {
-  src: "static/gallery/realizace/cukrarna/7.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Cukrárna a Kavárna Dortletka"
-}, {
-  src: "static/gallery/realizace/cukrarna/8.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Cukrárna a Kavárna Dortletka"
-}, {
-  src: "static/gallery/realizace/cukrarna/9.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Cukrárna a Kavárna Dortletka"
-}, {
-  src: "static/gallery/realizace/cukrarna/10.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Cukrárna a Kavárna Dortletka"
-}, {
-  src: "static/gallery/realizace/cukrarna/11.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Cukrárna a Kavárna Dortletka"
-}];
-var PHOTO_ITEMS_4 = [{
-  src: "static/gallery/realizace/statek/1.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/2.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/3.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/4.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/5.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/6.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/7.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/8.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/9.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/10.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/11.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/12.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/13.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/14.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/15.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}, {
-  src: "static/gallery/realizace/statek/16.jpg",
-  w: 1200,
-  h: 800,
-  caption: "Statek"
-}];
+var sanityClient = __webpack_require__(/*! @sanity/client */ "@sanity/client");
+
+
+
+
+var client = sanityClient({
+  projectId: "6rx0nq6y",
+  dataset: "dobrebydloeudata"
+});
+var builder = _sanity_image_url__WEBPACK_IMPORTED_MODULE_6___default()(client);
+var tempArray = [];
+var tempTitles = [];
+var tempDescriptions = [];
+var tempContents = [];
+var tempGallery = {};
+var tempImg = [];
+var tempURL;
 
 var Realizace =
 /*#__PURE__*/
@@ -836,7 +631,17 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Realizace)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
-      navOpened: false
+      navOpened: false,
+      dataTitles: [],
+      dataDescriptions: [],
+      dataGallery: [],
+      galleryOpened: false
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "navToggle", function () {
+      _this.setState({
+        navOpened: !_this.state.navOpened
+      });
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "navHandler", function () {
@@ -845,22 +650,131 @@ function (_React$Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "openPhotoSwipe", function (e) {
+      e.preventDefault();
+
+      _this.setState({
+        isOpen: true,
+        options: {
+          closeOnScroll: false
+        }
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleClose", function () {
+      _this.setState({
+        isOpen: false
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "getThumbnailContent", function (item) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: item.thumbnail,
+        with: 120,
+        height: 90,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "getThumbnailContent", function (item) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: item.thumbnail,
+        with: 120,
+        height: 90,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99
+        },
+        __self: this
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "renderGalleries", function () {
+      return _this.state.dataTitles.map(function (title, id) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "section__gallery",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 104
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 105
+          },
+          __self: this
+        }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 106
+          },
+          __self: this
+        }, _this.state.dataDescriptions[id]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_photoswipe__WEBPACK_IMPORTED_MODULE_7__["PhotoSwipeGallery"], {
+          items: _this.state.dataGallery[id],
+          thumbnailContent: _this.getThumbnailContent,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 107
+          },
+          __self: this
+        }));
+      });
+    });
+
     return _this;
   }
 
   _createClass(Realizace, [{
+    key: "generateGalleries",
+    value: function generateGalleries() {
+      Object.keys(tempContents).map(function (j) {
+        return Object.keys(tempContents[j]).map(function (k) {
+          return tempURL = builder.image(tempContents[j][k]).url(), tempGallery[j] = _toConsumableArray(tempGallery[j] || []).concat([{
+            src: tempURL,
+            thumbnail: tempURL + "?w=500",
+            title: "Photo",
+            w: tempURL.split("-")[1].split(".")[0].split("x")[0],
+            h: tempURL.split("-")[1].split(".")[0].split("x")[1]
+          }]);
+        });
+      });
+      this.setState({
+        dataTitles: tempTitles,
+        dataDescriptions: tempDescriptions,
+        dataGallery: tempGallery
+      }), this.renderGalleries();
+    }
+  }, {
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      client.fetch("\n      * | [ _type == \"realizace\"]| {\n        _id,\n        title,\n        description,\n        content,\n      }").then(function (res) {
+        Object.keys(res).map(function (i) {
+          return tempTitles.push(res[i].title), tempDescriptions.push(res[i].description), tempContents.push(res[i].content), i >= res.length - 1 ? _this2.generateGalleries() : console.log("Načítám");
+        });
+      }).catch(function (err) {
+        console.error("Oh no, error occured: ", err);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 306
+          lineNumber: 145
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Head__WEBPACK_IMPORTED_MODULE_2__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 146
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -869,7 +783,7 @@ function (_React$Component) {
         navToggle: this.navToggle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 308
+          lineNumber: 147
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Content__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -877,127 +791,30 @@ function (_React$Component) {
         navHandler: this.navHandler,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 313
+          lineNumber: 152
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "content__container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 314
+          lineNumber: 153
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 315
+          lineNumber: 154
         },
         __self: this
-      }, "Realizace")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "section__gallery",
+      }, "Realizace")), this.state.dataGallery[0] ? this.renderGalleries() : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "loading",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 318
+          lineNumber: 159
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 319
-        },
-        __self: this
-      }, "Z\xE1meck\xE9 Vina\u0159stv\xED Johann W"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 320
-        },
-        __self: this
-      }, "T\u0159eb\xEDvlice"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_photoswipe_component__WEBPACK_IMPORTED_MODULE_5__["PhotoSwipeGallery"], {
-        items: PHOTO_ITEMS_1,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 321
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "section__gallery",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 323
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 324
-        },
-        __self: this
-      }, "Peka\u0159stv\xED Kraupner"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 325
-        },
-        __self: this
-      }, "Roudnice nad Labem"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_photoswipe_component__WEBPACK_IMPORTED_MODULE_5__["PhotoSwipeGallery"], {
-        items: PHOTO_ITEMS_2,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 326
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "section__gallery",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 328
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 329
-        },
-        __self: this
-      }, "Cukr\xE1rna a Kav\xE1rna Dortletka"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 330
-        },
-        __self: this
-      }, "Rodinn\xE9 cukr\xE1\u0159stv\xED a kav\xE1rna v Roudnici nad Labem"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_photoswipe_component__WEBPACK_IMPORTED_MODULE_5__["PhotoSwipeGallery"], {
-        items: PHOTO_ITEMS_3,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 331
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "section__gallery",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 333
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 334
-        },
-        __self: this
-      }, "Dv\u016Fr Perlov\xE1 voda"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 335
-        },
-        __self: this
-      }, "Kostelec nad Oh\u0159\xED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_photoswipe_component__WEBPACK_IMPORTED_MODULE_5__["PhotoSwipeGallery"], {
-        items: PHOTO_ITEMS_4,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 336
-        },
-        __self: this
-      }))));
+      }, "Na\u010D\xEDt\xE1n\xED...")));
     }
   }]);
 
@@ -1019,7 +836,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!**********************************!*\
   !*** multi ./pages/realizace.js ***!
   \**********************************/
@@ -1028,6 +845,39 @@ function (_React$Component) {
 
 module.exports = __webpack_require__(/*! ./pages/realizace.js */"./pages/realizace.js");
 
+
+/***/ }),
+
+/***/ "@sanity/block-content-to-react":
+/*!*************************************************!*\
+  !*** external "@sanity/block-content-to-react" ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@sanity/block-content-to-react");
+
+/***/ }),
+
+/***/ "@sanity/client":
+/*!*********************************!*\
+  !*** external "@sanity/client" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@sanity/client");
+
+/***/ }),
+
+/***/ "@sanity/image-url":
+/*!************************************!*\
+  !*** external "@sanity/image-url" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@sanity/image-url");
 
 /***/ }),
 
@@ -1053,14 +903,14 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ "react-photoswipe-component":
-/*!*********************************************!*\
-  !*** external "react-photoswipe-component" ***!
-  \*********************************************/
+/***/ "react-photoswipe":
+/*!***********************************!*\
+  !*** external "react-photoswipe" ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("react-photoswipe-component");
+module.exports = require("react-photoswipe");
 
 /***/ })
 

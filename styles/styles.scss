@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700");
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
-@import "photoswipe/main";
+@import "photoswipe";
 
 $color-white: #fff;
 $color-green: #aee5d8;
@@ -380,36 +380,10 @@ img.about {
   border-radius: 10px;
 }
 
-.pswp-gallery {
-  figure {
-    margin: 0;
-    padding: 0;
-  }
-
-  max-width: 1600px;
-  margin: 0 auto;
+img {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (max-width: 800px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: 640px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-  }
+  height: auto;
+  cursor: pointer;
 }
 
 .section__gallery {
@@ -465,4 +439,10 @@ img.about {
       }
     }
   }
+}
+
+.loading {
+  text-align: center;
+  padding: 100px;
+  color: #ccc;
 }

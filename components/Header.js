@@ -2,7 +2,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <header className="header">
-        <div class="header__logo">
+        <div className="header__logo">
           <a href="/index">Dobré bydlo</a>
         </div>
         <div className="header__nav-toggle" onClick={this.props.navToggle}>
@@ -14,7 +14,7 @@ export default class Header extends React.Component {
             />
           </svg>
         </div>
-        <ul class="header__nav">
+        <ul className="header__nav">
           <li>
             <a
               href="/kdo-jsme"
